@@ -1,10 +1,16 @@
 const header = elementFromTemplate(`
     <header class="header" id="header">
-        <div class="logo"></div>
+        <div class="logo">Cheesy pizza</div>
         <nav class="nav-bar" id="navBar">
-            <a href="" class="home" id="homeBtn">Home</a>
-            <a href="" class="menu" id="menuBtn">Menu</a>
-            <a href="" class="contact-us" id="contactUsBtn">Contact us</a>
+            <div class="home" id="homeBtn">
+                Home
+            </div>
+            <div class="menu" id="menuBtn">
+                Menu
+            </div>
+            <div class="contact-us" id="contactUsBtn">
+                Contact us
+            </div>
         </nav>
     </header>
 `)
