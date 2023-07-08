@@ -1,1 +1,3 @@
-console.log("Hello Webpack!")
+import loadPage from "./load-page";
+
+loadPage()
