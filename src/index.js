@@ -1,8 +1,14 @@
-import loadPage from "./load-page";
-import "./general-styles.css"
+import {elementFromTemplate, loadInitialPage} from "./initial-load";
+import switchPages from "./switch-pages";
+import "./styles/general-styles.css"
+import homeImg from "./assets/images/freshly-baked-pizza.jpg"
 
-// Header
-import "./header/header.js"
+import "./styles/header.css"
+import "./styles/home.css"
 
-
-loadPage()
+loadInitialPage()
+switchPages(elementFromTemplate(`
+    <div class="presentation-container" id="presentationContainerEl">
+        Try the pizza of your life!
+    </div>
+`), "home")

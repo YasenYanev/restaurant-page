@@ -15,9 +15,8 @@ const header = elementFromTemplate(`
     </header>
 `)
 const main = elementFromTemplate(`
-    <main class="main">
-        <div class="presentation-container" id="presentationContainerEl"></div>
-        <img src="" alt="">
+    <main id="mainSection">
+        
     </main>
 `)
 const footer = elementFromTemplate(`
@@ -34,6 +33,8 @@ function elementFromTemplate(html) {
     return template.content.firstElementChild
 }
 
-export default function() {
+function loadInitialPage() {
     document.body.append(header, main, footer)
 }
+
+export {elementFromTemplate, loadInitialPage}
