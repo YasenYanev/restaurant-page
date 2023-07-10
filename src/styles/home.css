@@ -1,0 +1,13 @@
+.home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.presentation-container {
+    
+}
+.homeImgPizza {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+}

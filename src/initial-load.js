@@ -2,13 +2,13 @@ const header = elementFromTemplate(`
     <header class="header" id="header">
         <div class="logo">Cheesy pizza</div>
         <nav class="nav-bar" id="navBar">
-            <div class="home" id="homeBtn">
+            <div class="home-nav" id="homeBtn">
                 Home
             </div>
-            <div class="menu" id="menuBtn">
+            <div class="menu-nav" id="menuBtn">
                 Menu
             </div>
-            <div class="contact-us" id="contactUsBtn">
+            <div class="contact-us-nav" id="contactUsBtn">
                 Contact us
             </div>
         </nav>
@@ -16,7 +16,7 @@ const header = elementFromTemplate(`
 `)
 const main = elementFromTemplate(`
     <main id="mainSection">
-        
+    
     </main>
 `)
 const footer = elementFromTemplate(`

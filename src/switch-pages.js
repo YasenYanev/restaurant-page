@@ -1,15 +1,41 @@
+import {elementFromTemplate} from "./initial-load";
 import homePizza from "./assets/images/freshly-baked-pizza.jpg"
 
-const mainSection = document.getElementById("mainSection")
+export default function(mainEl, page) {
+    mainEl.innerHTML = ""
 
-export default function(html, page) {
-    mainSection.innerHTML = html
-    mainSection.className = ""
-    mainSection.className = page
-    if (page == "home") {
+
+    if (page === "home") {
+        mainEl.append(elementFromTemplate(`
+        <div class="presentation-container" id="presentationContainerEl">
+            Try the pizza of your life!
+        </div>
+        `))
+
         const homePizzaImg = new Image()
         homePizzaImg.src = homePizza
-        mainSection.append(homePizzaImg)
-    }
-    console.log(mainSection)
+        homePizzaImg.className = "homeImgPizza"
+        mainEl.append(homePizzaImg)
+
+        mainEl.className = ""
+        mainEl.className = page
+    } else if(page === "menu") {
+        for(let i = 1; i < 5; i++) {
+            mainEl.append(elementFromTemplate(`
+            <div class="Item ${i}"> </div>
+            `))
+        }
+
+        mainEl.className = ""
+        mainEl.className = page
+    }else if (page === "contact") {
+        mainEl.append(elementFromTemplate(`
+        <div class="contact-us" id="contactUs">
+            Contact us!
+        </div>
+        `))
+
+        mainEl.className = ""
+        mainEl.className = page
+    }  
 }

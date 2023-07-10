@@ -5,9 +5,6 @@ header {
     padding: 0 1vw 0 1vw;
 }
 
-
-
-
 .logo,
 .nav-bar,
 .nav-bar * {
@@ -21,9 +18,9 @@ header {
     color: #ffffff;
 }
  /* Nav bar */
-.home,
-.menu,
-.contact-us {
+.home-nav,
+.menu-nav,
+.contact-us-nav {
     height: 100%;
     width: 100%;
     color: #ffffff;
@@ -31,15 +28,15 @@ header {
 }
 
 
-.home:hover {
+.home-nav:hover {
     background-color: #ffffff;
     color: #000000;
 }
-.menu:hover {
+.menu-nav:hover {
     background-color: #ffffff;
     color: #000000;
 }
-.contact-us:hover {
+.contact-us-nav:hover {
     background-color: #ffffff;
     color: #000000;
 }
