@@ -1,16 +1,18 @@
+import switchPages from "./switch-pages";
+
 const header = elementFromTemplate(`
     <header class="header" id="header">
-        <div class="logo">Cheesy pizza</div>
+        <div id="logo" class="logo">Cheesy pizza</div>
         <nav class="nav-bar" id="navBar">
-            <div class="home-nav" id="homeBtn">
+            <button class="home-nav" id="homeBtn">
                 Home
-            </div>
-            <div class="menu-nav" id="menuBtn">
+            </button>
+            <button class="menu-nav" id="menuBtn">
                 Menu
-            </div>
-            <div class="contact-us-nav" id="contactUsBtn">
+            </button>
+            <button class="contact-us-nav" id="contactUsBtn">
                 Contact us
-            </div>
+            </button>
         </nav>
     </header>
 `)
@@ -35,6 +37,8 @@ function elementFromTemplate(html) {
 
 function loadInitialPage() {
     document.body.append(header, main, footer)
+
+    switchPages(main, "home")
 }
 
 export {elementFromTemplate, loadInitialPage}

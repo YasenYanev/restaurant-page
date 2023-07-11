@@ -1,13 +1,71 @@
 .home {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+}
+.home > * {
+    flex: 1;
+}
+/* Presentation section */
+
+.presentation-container {
+    height: 50vh;
+    position: relative;
+}
+.presentation-content-wrapper {
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.presentation-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    color: white;
+}
+.presentation-content-txt {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+.explore-menu-btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #ff3838;
+}
+.explore-menu-btn:hover {
+    background-color: #ff5353;
+}
+.homeImgPizza {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* About section */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+.about-content {
+    height: 100%;
+    width: 80%;
+    background-color: black;
+    color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.presentation-container {
-    
-}
-.homeImgPizza {
-    width: 100%;
+.ovenPizza {
     height: 100%;
+    width: 100%;
     object-fit: cover;
-    object-position: right;
 }
