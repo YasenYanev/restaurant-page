@@ -1,31 +1,23 @@
 .home {
-    display: flex;
+    justify-content: normal;
+    align-items: normal;
     flex-direction: column;
     height: 160vh;
-}
-.home > * {
-    flex: 1;
 }
 /* Presentation section */
 
 .presentation-container {
-    height: 50vh;
     position: relative;
+    height: 50vh;
 }
 .presentation-content-wrapper {
     position: absolute;
     inset: 0 0 0 0;
     background-color: rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 .presentation-content {
-    display: flex;
     flex-direction: column;
-    justify-content: baseline;
-    align-items: center;
     color: white;
 }
 .presentation-content-txt {
@@ -51,28 +43,19 @@
 
 /* About section */
 .about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #ecebeb;
 }
 .about-content {
+    grid-template-columns: repeat(2, 1fr);
     height: 100%;
     width: 80%;
-    background-color: #000000;
     color: white;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    background-color: #000000;
 }
 .ovenPizza {
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
-.about-sec1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .about-content-txt {
     font-size: 3.5rem;

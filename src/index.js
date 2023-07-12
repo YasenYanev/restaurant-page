@@ -12,7 +12,6 @@ loadInitialPage()
 
 
 // Variables
-const logo = document.getElementById("logo")
 const homeNavBtn = document.getElementById("homeBtn")
 const menuNavBtn = document.getElementById("menuBtn")
 const contactNavBtn = document.getElementById("contactUsBtn")
@@ -21,9 +20,6 @@ let exploreMenuBtn = document.getElementById("exploreMenuBtn")
 
 // Event listeners
 
-logo.addEventListener("click", () => {
-    switchPages(mainSection, "home")
-})
 homeNavBtn.addEventListener("click", () => {
     switchPages(mainSection, "home")
 

@@ -1,12 +1,8 @@
 .footer {
     background-color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .footer-info {
     color: #ffffff;
-    display: grid;
     grid-template-columns: 12.5rem 1rem;
 }
 .gitLogo {

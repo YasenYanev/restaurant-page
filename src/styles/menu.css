@@ -1,17 +1,14 @@
 .menu {
-    flex: 1;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     background-color: #000000;
 }
 
 .menu > * {
-    background-color: #ffffff;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 25rem;
     border-radius: 10% 10% 10% 10%;
+    background-color: #ffffff;
 }
 
 .menu > *:hover {
@@ -19,9 +16,6 @@
 }
 
 .menu > * :first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-style: italic;
     font-weight: 500;
     font-size: 1.8rem;
@@ -35,8 +29,4 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
-}
-
-.item-0 {
-    border-radius: 10% 10% 10% 10%;
 }

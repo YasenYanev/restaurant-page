@@ -48,10 +48,10 @@ footer, header, hgroup, menu, nav, section {
 
 /* general styles */
 body {
-    line-height: 1;
-    min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	min-height: 100vh;
+    line-height: 1;
 	font-family: "Ubuntu", sans-serif;
 	font-weight: 400;
 }
@@ -62,4 +62,35 @@ button {
 .header, 
 .footer {
     height: 3.5rem;
+}
+
+/* Elements using flexbox */
+.logo,
+.nav-bar,
+.home,
+.presentation-content,
+.presentation-content-wrapper,
+.about-container,
+.about-sec1,
+.menu > * :first-child,
+.contact,
+.footer {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+/* Elements using flex: 1 */
+.home > *,
+.menu,
+.contact {
+	flex: 1;
+}
+/* Elements using grid */
+.header,
+.about-content,
+.menu,
+.menu > *,
+.footer-info {
+	display: grid;
 }
