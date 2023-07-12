@@ -1,0 +1,42 @@
+.menu {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    background-color: #000000;
+}
+
+.menu > * {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 25rem;
+    border-radius: 10% 10% 10% 10%;
+}
+
+.menu > *:hover {
+    background-color: #ff5353;
+}
+
+.menu > * :first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.item-img-0, 
+.item-img-1,
+.item-img-2,
+.item-img-3 {
+    aspect-ratio: 1/1;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.item-0 {
+    border-radius: 10% 10% 10% 10%;
+}

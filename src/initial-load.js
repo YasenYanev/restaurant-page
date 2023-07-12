@@ -1,8 +1,9 @@
 import switchPages from "./switch-pages";
+import gitLogo from "./assets/icons/github-mark-white.png"
 
 const header = elementFromTemplate(`
     <header class="header" id="header">
-        <div id="logo" class="logo">Cheesy pizza</div>
+        <div id="logo" class="logo">Pepi Pizza</div>
         <nav class="nav-bar" id="navBar">
             <button class="home-nav" id="homeBtn">
                 Home
@@ -23,9 +24,16 @@ const main = elementFromTemplate(`
 `)
 const footer = elementFromTemplate(`
     <footer class="footer" id="footer">
-        <div class="page-info"></div>
+        <div class="footer-info">
+            <div class="footer-txt">Developed by YasenYanev</div> 
+            <a href="https://github.com/YasenYanev"></a>
+        </div>
     </footer>
 `)
+
+const footerImg = new Image()
+footerImg.src = gitLogo
+footerImg.className = "gitLogo"
 
 function elementFromTemplate(html) {
     const template = document.createElement("template")
@@ -39,6 +47,8 @@ function loadInitialPage() {
     document.body.append(header, main, footer)
 
     switchPages(main, "home")
+
+    footer.children[0].children[1].append(footerImg)
 }
 
 export {elementFromTemplate, loadInitialPage}

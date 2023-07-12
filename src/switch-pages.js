@@ -1,6 +1,22 @@
 import {elementFromTemplate} from "./initial-load";
 import homePizza from "./assets/images/freshly-baked-pizza.jpg"
 import ovenPizza from "./assets/images/chef-putting-pizzain-oven.jpg"
+import itemImgOne from "./assets/images/item-0-img.png"
+import itemImgTwo from "./assets/images/item-1-img.png"
+import itemImgThree from "./assets/images/item-2-img.png"
+import itemImgFour from "./assets/images/item-3-img.png"
+
+const menuImages = [ImageFactory(itemImgOne, `item-img-0`), ImageFactory(itemImgTwo, `item-img-1`), ImageFactory(itemImgThree, `item-img-2`), ImageFactory(itemImgFour, `item-img-3`)]
+const menuPizzaNames = ["Sausage Extra Cheesy Pizza", "Juicy Ham Pizza", "Classic Tomato Pizza", "Tomato and Cheese Pizza"]
+
+function ImageFactory(src, className) {
+    const img = new Image()
+    img.src = src
+    img.className = className
+
+    return img
+}
+
 
 export default function(mainEl, page) {
     mainEl.innerHTML = ""
@@ -20,40 +36,47 @@ export default function(mainEl, page) {
         mainEl.append(elementFromTemplate(`
             <div id="aboutContainerEl" class="about-container"> 
                 <div id="aboutContent" class="about-content">
-                    <div>
-                        The best pizza in town is waiting for you. 
+                    <div class="about-sec1">
+                        <div class="about-content-txt">
                         With new interesting flavours and good prices 
-                        this is the only place where you can have a combination 
+                        that is the only place where you can have a combination 
                         of good flavour and price!
+                        </div>
                     </div>
                 </div>
             </div>
         `))
 
-        const homePizzaImg = new Image()
-        homePizzaImg.src = homePizza
-        homePizzaImg.className = "homeImgPizza"
-        mainEl.children[0].append(homePizzaImg)
+        mainEl.children[0].append(ImageFactory(homePizza, "homeImgPizza"))
+        mainEl.children[1].children[0].append(ImageFactory(ovenPizza, "ovenPizza"))
 
-        const aboutImage = new Image()
-        aboutImage.src = ovenPizza
-        aboutImage.className = "ovenPizza"
-        mainEl.children[1].children[0].append(aboutImage)
 
         mainEl.className = page
     } else if(page === "menu") {
-        for(let i = 1; i < 5; i++) {
+        for(let i = 0; i < 4; i++) {
             mainEl.append(elementFromTemplate(`
-            <div class="Item ${i}"> </div>
+            <div class=" item-${i}"></div>
             `))
+            mainEl.children[i].append(elementFromTemplate(`
+            <div class="item-${i}-txt">
+                ${menuPizzaNames[i]}
+            </div>
+            `))
+            mainEl.children[i].append(menuImages[i])
         }
 
         mainEl.className = ""
         mainEl.className = page
     }else if (page === "contact") {
         mainEl.append(elementFromTemplate(`
-        <div class="contact-us" id="contactUs">
-            Contact us!
+        <div>
+            Contact Us
+        </div>
+        `))
+
+        mainEl.append(elementFromTemplate(`
+        <div>
+            Phone number: 345890374
         </div>
         `))
 

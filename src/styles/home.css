@@ -54,12 +54,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: #ecebeb;
 }
 .about-content {
     height: 100%;
     width: 80%;
-    background-color: black;
+    background-color: #000000;
     color: white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -68,4 +68,14 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+.about-sec1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-content-txt {
+    font-size: 3.5rem;
+    width: 90%;
+    text-align: center;
 }

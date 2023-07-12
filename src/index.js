@@ -4,30 +4,35 @@ import switchPages from "./switch-pages"
 import "./styles/general-styles.css"
 import "./styles/header.css"
 import "./styles/home.css"
+import "./styles/menu.css"
+import "./styles/contact-us.css"
 import "./styles/footer.css"
 // First page load
 loadInitialPage()
 
 
-// Constants
+// Variables
 const logo = document.getElementById("logo")
 const homeNavBtn = document.getElementById("homeBtn")
 const menuNavBtn = document.getElementById("menuBtn")
 const contactNavBtn = document.getElementById("contactUsBtn")
 const mainSection = document.getElementById("mainSection")
-const secondSectionContent = document.getElementById("aboutContainerEl")
-const exploreMenuBtn = document.getElementById("exploreMenuBtn")
+let exploreMenuBtn = document.getElementById("exploreMenuBtn")
+
 // Event listeners
 
-//Buttons leading to homepage
 logo.addEventListener("click", () => {
     switchPages(mainSection, "home")
 })
 homeNavBtn.addEventListener("click", () => {
     switchPages(mainSection, "home")
+
+    exploreMenuBtn = document.getElementById("exploreMenuBtn")
+    exploreMenuBtn.addEventListener("click", () => {
+        switchPages(mainSection, "menu")
+    })
 })
 
-//Buttons leading to menu page
 menuNavBtn.addEventListener("click", () => {
     switchPages(mainSection, "menu")
 })
@@ -36,7 +41,6 @@ exploreMenuBtn.addEventListener("click", () => {
     console.log(exploreMenuBtn)
 })
 
-//Buttons leading to contact us page
 contactNavBtn.addEventListener("click", () => {
     switchPages(mainSection, "contact")
 })
