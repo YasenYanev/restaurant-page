@@ -24,7 +24,7 @@ header {
     border: .05em solid #000000;
     background-color: #000000;
     color: #ffffff;
-    font-size: 500;
+    font-weight: 500;
     cursor: pointer;
 }
 
